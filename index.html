@@ -58,15 +58,50 @@
         <!-- text input for name -->
         <label for="name">Your Name:</label>
         <br />
-        <input type="text" name="name" id="name" placeholder="E.g. Jamie smith" />
+        <input type="text" name="name" id="name" placeholder="E.g. Jamie smith"  required minlength="5" maxlength="25">
         <br /><br />
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <!-- phone number format 123-456-7890 -->
+         <!-- Regular expression -->
+         <label for="phone">Your phone Number</label>
+         <input type="tel" name="phone" id="phone" pattern="\d{3}-\d{3}-{4}\d" placeholder="123-456-7890">
+         <br><br>
+         <!-- website -->
+         <label for="website">Your website:optional</label>
+         <input type="url" name="url" id="url" placeholder="https://www.example.com">
+         <br>
         <!-- Text input for feedback -->
         <label for="feedback">Your thoughts</label>
         <br />
         <textarea name="feedback" id="feedback" cols="30" rows="5"></textarea>
       </form>
       <br /><br />
+      <!-- rate your experience -->
+       <p>How would you rate this blog</p>
+       <input type="radio" name="rating" id="good" required>
+       <label for="good">Good</label>
+       <input type="radio" name="rating" id="nuetral" required>
+       <label for="nuetral">Nuetral</label>
+       <input type="radio" name="rating" id="bad" required>
+       <label for="bad">Bad</label>
+       <br><br>
+       <!-- Newsletter sign up -->
+        <input type="checkbox" name="newslettter" id="newsletter" value="yes">
+        <label for="newsletter">Sign up for yourr newsletter</label>
+        <br><br>
+        <!-- Newsletter topic -->
+         <label for="topic">choose a topic</label>
+         <select name="topic" id="topic">
+          <option value="">--Please choose an option--</option>
+          <option value="general">General</option>
+          <option value="suggetion">Suggetion</option>
+          <option value="questions">Questions</option>
+         </select>
+         <br><br>
       <button type="button">Submit feedback</button>
+      <br>
     </section>
     <footer>
         <p> &#128591 Thank you for your feedback &#128591</p>
